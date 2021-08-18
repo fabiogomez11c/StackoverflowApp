@@ -12,9 +12,9 @@ export const AppRouter = () => {
             <div>
                 <NavBar/>
                 <Switch>
-                    <Route path="/" component={Search}/>
-                    <Route path="/tags" component={Tags}/>
-                    <Route path="/users" component={Users}/>
+                    <Route exact path="/" component={Search}/>
+                    <Route exact path="/tags" component={Tags}/>
+                    <Route exact path="/users" component={Users}/>
                 </Switch>
             </div>
         </BrowserRouter>

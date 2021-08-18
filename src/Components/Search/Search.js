@@ -1,9 +1,12 @@
 import React from 'react'
+import { Browser } from './Browser'
 
 export const Search = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <section className="search">
+                <Browser/>
+            </section>
+        </>
     )
 }
