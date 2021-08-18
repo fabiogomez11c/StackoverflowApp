@@ -1,0 +1,30 @@
+
+.navbar__button {
+    list-style: none;
+    margin: 0px 20px;
+}
+
+.navbar__link {
+    width: 140px;
+    height: 50px;
+    background: #709176;
+    padding: 5px 10px;
+    color: #EBEBEB;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.navbar__link:hover {
+    background: #5f7c65;
+}
+
+.active {
+    background: #FF6B35;
+    transition: 0.5s;
+}
+
+.active:hover {
+    background: #d3582c;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import { NavSection } from './NavSection'
 
 import stackoverflow from "../../assets/stackoverflow.svg"
+import "./NavBar.css"
 
 export const NavBar = () => {
     const sections = [
@@ -21,13 +22,11 @@ export const NavBar = () => {
     return (
         <>
             <section className="navbar">
-                <span>
-                    <img 
-                        alt="stackoverflow_icon" 
-                        src={stackoverflow} 
-                        className="navbar__icon"
-                    />
-                </span>
+                <img 
+                    alt="stackoverflow_icon" 
+                    src={stackoverflow}
+                    className="navbar__icon"
+                />
                 <ul className="navbar__list">
                     {sections.map((item, idx) => {
                         return <NavSection 
