@@ -5,6 +5,8 @@ import { createSearchURL } from '../../helpers/createURL'
 import { useFetch } from '../../hooks/useFetch'
 import { searchReducer } from './searchReducer'
 
+import "./Browser.css"
+
 
 export const Browser = () => {
     
@@ -19,7 +21,7 @@ export const Browser = () => {
         if (inputState.trim().length <= 1){
             return;
         }
-
+        
         createSearchURL(inputState, setUrl);
         
         const action = {
@@ -43,7 +45,9 @@ export const Browser = () => {
     }
     
     return (
-        <div className="browser">
+        <div 
+            className="browser"
+        >
             <form onSubmit={handleSubmit}>
                 <div>
                     <input 
@@ -62,28 +66,10 @@ export const Browser = () => {
             </form>
             <img 
                 alt="browser__icon" 
+                className="browser__icon"
                 src={browser__icon}
                 onClick={handleSubmit}
                 />
         </div>
     )
 }
-
-// const useFetch = (url) => {
-
-//     const {setData} = useContext(GlobalContext);
-//     const [loading, setLoading] = useState(false);
-
-//     useEffect(() => {
-//         console.log(url)
-//         fetch(url)
-//             .then(resp => resp.json())
-//             .then(respData => {
-//                 setData(respData);
-//                 setLoading(true);
-//             });
-//     }, [url])
-    
-//     return loading;
-    
-// }
