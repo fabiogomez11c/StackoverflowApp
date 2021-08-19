@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import { GlobalContext } from '../GlobalContext/GlobalContext'
 import { Card } from './Card'
 
+import "./Cards.css"
+
 export const Cards = () => {
 
     const {data} = useContext(GlobalContext);
