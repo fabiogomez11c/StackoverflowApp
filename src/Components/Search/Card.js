@@ -1,11 +1,14 @@
 import React from 'react'
+import { decodeHtml } from '../../helpers/decodeHTML'
 
 import "./Card.css"
 
-export const Card = ({title, nAnswers, fAnswer, tags}) => {
+export const Card = ({title, nAnswers, fAnswer, tags, link}) => {
+    const newTitle = decodeHtml(title)
     return (
+    <a href={link} target="_blank">
         <div className="card">
-            <h4>{title}</h4>
+            <h4>{newTitle}</h4>
             <div className="card__info">
                 <div className="card__text">
                     <p>Answers:</p>
@@ -21,7 +24,7 @@ export const Card = ({title, nAnswers, fAnswer, tags}) => {
                 </div>
             </div>
             <div className="card__tags">
-                {tags.map((tag, idx) => {
+                {tags.slice(0, 3).map((tag, idx) => {
                     return (
                         <span 
                             key={idx} 
@@ -33,5 +36,6 @@ export const Card = ({title, nAnswers, fAnswer, tags}) => {
                 })}
             </div>
         </div>
+    </a>
     )
 }

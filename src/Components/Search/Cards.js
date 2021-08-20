@@ -19,6 +19,7 @@ export const Cards = () => {
                     nAnswers={item.answer_count}
                     fAnswer={item.is_answered}
                     tags={item.tags}
+                    link={item.link}
                     key={item.question_id}
                 />
             }))
