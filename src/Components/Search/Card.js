@@ -5,6 +5,7 @@ import "./Card.css"
 
 export const Card = ({title, nAnswers, fAnswer, tags, link}) => {
     const newTitle = decodeHtml(title)
+    console.log(tags)
     return (
     <a href={link} target="_blank">
         <div className="card">
@@ -24,7 +25,7 @@ export const Card = ({title, nAnswers, fAnswer, tags, link}) => {
                 </div>
             </div>
             <div className="card__tags">
-                {tags.slice(0, 3).map((tag, idx) => {
+                {tags?.slice(0, 3).map((tag, idx) => {
                     return (
                         <span 
                             key={idx} 
