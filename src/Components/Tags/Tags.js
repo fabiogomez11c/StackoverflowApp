@@ -1,26 +1,40 @@
-import React, { useContext, useState } from 'react'
-import { useFetch } from '../../hooks/useFetch'
-import { GlobalContext } from '../GlobalContext/GlobalContext'
+import React, { useState } from 'react'
+import { useFetch, useLocalFetch } from '../../hooks/useFetch'
 import { Cards } from '../Search/Cards'
+import { Tag } from './Tag'
+
+import "./Tags.css"
 
 export const Tags = () => {
     
-    const {data} = useContext(GlobalContext)
+    const [activeBtn, setActiveBtn] = useState("python");
+    const [url, setUrl] = useState(`https://api.stackexchange.com/2.3/search?order=desc&sort=activity&tagged=${activeBtn}&site=stackoverflow`);
     
-    const [url, setUrl] = useState("https://api.stackexchange.com/2.3/tags?order=desc&sort=popular&site=stackoverflow")
-    const loading = useFetch(url);
+    useFetch(url);
+
+    const [tagState, setTagState] = useState({});
+    const loadingTags = useLocalFetch(
+        "https://api.stackexchange.com/2.3/tags?order=desc&sort=popular&site=stackoverflow",
+        setTagState
+    );
     
     return (
-        <div>
+        <div className="tag-section">
             <div className="tags">
                 {
-                    (!loading) ? <p>{"Loading..."}</p>
-                    : data.items.slice(0, 5).map((item) => {
-                        return (<button key={item.name}>{item.name}</button>)
+                    (!loadingTags) ? <p>{"Loading..."}</p>
+                    : tagState.items.slice(0, 10).map((item) => {
+                        return (<Tag
+                            key={item.name}
+                            item={item}
+                            urlHandler={setUrl}
+                            btnActivate={setActiveBtn}
+                            btnState={activeBtn}
+                        />)
                     })
                 }
             </div>
-            {/* <Cards/> */}
+            <Cards/>
         </div>
     )
 }

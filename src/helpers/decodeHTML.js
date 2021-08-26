@@ -8,5 +8,7 @@ export function decodeHtml(text) {
         .replace(/&#39;/g, "'")
         .replace(/&quot;/g, '"')
         .replace(/&lt;/g, ">")
+        .replace(/>/g, "<")
+        .replace(/&gt;/g, ">")
     return newText
 }

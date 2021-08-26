@@ -13,14 +13,14 @@ export const Cards = () => {
     return (
         <div className="cards">
             {items ? 
-            (items.map((item) => {
+            (items.map((item, idx) => {
                 return <Card
                     title={item.title}
                     nAnswers={item.answer_count}
                     fAnswer={item.is_answered}
                     tags={item.tags}
                     link={item.link}
-                    key={item.question_id}
+                    key={idx}
                 />
             }))
             : <div></div>

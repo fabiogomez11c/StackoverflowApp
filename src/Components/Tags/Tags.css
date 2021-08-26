@@ -1,0 +1,14 @@
+
+.tag-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tags {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 30px;
+    padding: 20px 295px;
+}

@@ -5,9 +5,8 @@ import "./Card.css"
 
 export const Card = ({title, nAnswers, fAnswer, tags, link}) => {
     const newTitle = decodeHtml(title)
-    console.log(tags)
     return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noopener noreferrer">
         <div className="card">
             <h4>{newTitle}</h4>
             <div className="card__info">
