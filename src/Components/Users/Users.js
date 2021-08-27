@@ -3,6 +3,8 @@ import { User } from './User'
 import { GlobalContext } from '../GlobalContext/GlobalContext'
 import { useFetch} from '../../hooks/useFetch'
 
+import "./Users.css"
+
 export const Users = () => {
 
     const {data} = useContext(GlobalContext)
@@ -13,12 +15,13 @@ export const Users = () => {
             <div className="users">
                 {
                     !loading ? "Loading..."
-                    : data.items.slice(0, 9).map((item) => {
+                    : data.items.slice(0, 8).map((item) => {
                         return (
                             <User 
                                 key={item.display_name}
                                 userName={item.display_name}
                                 profileImage={item.profile_image}
+                                profileLink={item.link}
                             />
                         )
                     })
