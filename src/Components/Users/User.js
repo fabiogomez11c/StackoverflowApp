@@ -1,16 +1,18 @@
 import React from 'react'
 
-export const User = () => {
+import "./User.css"
+
+export const User = ({userName, profileImage}) => {
     return (
         <div className="user__info">
-            <img/>
+            <img alt="user_name" src={profileImage}/>
             <div className="user__name">
                 <p>
-                    Name
+                    {userName}
                 </p>
             </div>
             <div className="user__profile">
-                <a>
+                <a href="https://www.google.com">
                     Profile
                 </a>
             </div>
