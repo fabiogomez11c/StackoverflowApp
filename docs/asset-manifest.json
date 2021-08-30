@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/StackoverflowApp/static/css/main.7e7abec9.chunk.css",
-    "main.js": "/StackoverflowApp/static/js/main.3ed90ec8.chunk.js",
-    "main.js.map": "/StackoverflowApp/static/js/main.3ed90ec8.chunk.js.map",
+    "main.js": "/StackoverflowApp/static/js/main.eccd4887.chunk.js",
+    "main.js.map": "/StackoverflowApp/static/js/main.eccd4887.chunk.js.map",
     "runtime-main.js": "/StackoverflowApp/static/js/runtime-main.0af800a3.js",
     "runtime-main.js.map": "/StackoverflowApp/static/js/runtime-main.0af800a3.js.map",
-    "static/js/2.6a22d7f5.chunk.js": "/StackoverflowApp/static/js/2.6a22d7f5.chunk.js",
-    "static/js/2.6a22d7f5.chunk.js.map": "/StackoverflowApp/static/js/2.6a22d7f5.chunk.js.map",
+    "static/js/2.ef61b111.chunk.js": "/StackoverflowApp/static/js/2.ef61b111.chunk.js",
+    "static/js/2.ef61b111.chunk.js.map": "/StackoverflowApp/static/js/2.ef61b111.chunk.js.map",
     "index.html": "/StackoverflowApp/index.html",
     "static/css/main.7e7abec9.chunk.css.map": "/StackoverflowApp/static/css/main.7e7abec9.chunk.css.map",
-    "static/js/2.6a22d7f5.chunk.js.LICENSE.txt": "/StackoverflowApp/static/js/2.6a22d7f5.chunk.js.LICENSE.txt",
+    "static/js/2.ef61b111.chunk.js.LICENSE.txt": "/StackoverflowApp/static/js/2.ef61b111.chunk.js.LICENSE.txt",
     "static/media/lupa.db0d55bc.svg": "/StackoverflowApp/static/media/lupa.db0d55bc.svg",
     "static/media/stackoverflow.87df81e9.svg": "/StackoverflowApp/static/media/stackoverflow.87df81e9.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0af800a3.js",
-    "static/js/2.6a22d7f5.chunk.js",
+    "static/js/2.ef61b111.chunk.js",
     "static/css/main.7e7abec9.chunk.css",
-    "static/js/main.3ed90ec8.chunk.js"
+    "static/js/main.eccd4887.chunk.js"
   ]
 }
